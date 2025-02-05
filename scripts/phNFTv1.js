@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
     const NFT = await hre.ethers.getContractFactory("phNFTv1");
-    const nft = await NFT.deploy("MyNFT","MNFT");
+    const nft = await NFT.deploy("pHnftV1", "phv1", "https://matthewrzervas.wordpress.com");
 
     await nft.waitForDeployment();
     console.log("NFT deployed to:", await nft.getAddress());
